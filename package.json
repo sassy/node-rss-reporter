@@ -1,0 +1,16 @@
+{
+  "name": "node-rss-reporter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.4.2",
+    "feedparser": "^1.1.4",
+    "request": "^2.72.0"
+  }
+}
