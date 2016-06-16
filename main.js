@@ -52,7 +52,7 @@ new Promise((resolve, reject) => {
       to: '', //TBD
       subject: 'RSS Report',
       html: text
-    }
+    };
     transporter.sendMail(mailOptions, (error, info) =>  {
       if (error) {
         console.log(error);
