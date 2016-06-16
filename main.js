@@ -9,7 +9,7 @@ const FeedParser = require('feedparser'),
 const URL = ''; //TBD
 
 
-new Promise((resolve, reject) => {
+new Promise((resolve/*, reject*/) => {
   const req = request(URL);
   const feedparser = new FeedParser();
   const articles = [];
@@ -21,8 +21,7 @@ new Promise((resolve, reject) => {
     const stream = this;
     let item;
 
-
-    while (item = stream.read()) {
+    while ((item = stream.read()) !== null) {
       articles.push({
         title: item.title,
         link: item.link,
@@ -44,7 +43,7 @@ new Promise((resolve, reject) => {
 }).then((articles) => {
     const template = fs.readFileSync('template.ejs', 'utf-8');
     const text = ejs.render(template, {
-      items: articles,
+      items: articles
     });
     const transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
     const mailOptions = {

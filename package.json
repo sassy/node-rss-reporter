@@ -11,10 +11,12 @@
   "dependencies": {
     "ejs": "^2.4.2",
     "feedparser": "^1.1.4",
+    "nodemailer": "^2.4.2",
     "request": "^2.72.0"
   },
   "devDependencies": {
     "eslint": "^2.12.0",
+    "eslint-plugin-node": "^1.4.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^2.0.0"
   }
