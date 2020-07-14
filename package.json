@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,8 +17,6 @@
   },
   "devDependencies": {
     "eslint": "7.4.0",
-    "eslint-plugin-node": "11.1.0",
-    "gulp": "4.0.2",
-    "gulp-eslint": "6.0.0"
+    "eslint-plugin-node": "11.1.0"
   }
 }
