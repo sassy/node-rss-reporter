@@ -45,7 +45,15 @@ new Promise((resolve/*, reject*/) => {
     const text = ejs.render(template, {
       items: articles
     });
-    const transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+          user: "", // TBD
+          pass: "" // TBD
+      }
+    });
     const mailOptions = {
       from: 'notify@test.com',
       to: '', //TBD
