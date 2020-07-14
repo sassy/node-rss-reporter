@@ -4,19 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint main.js",
+    "build": "tsc main.ts",
+    "lint": "eslint main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@types/ejs": "^3.0.4",
+    "@types/feedparser": "^2.2.3",
+    "@types/nodemailer": "^6.4.0",
+    "@types/request": "^2.48.5",
     "ejs": "^3.0.0",
     "feedparser": "^2.0.0",
     "nodemailer": "^6.0.0",
     "request": "^2.72.0"
   },
   "devDependencies": {
+    "@types/node": "^14.0.23",
     "eslint": "7.4.0",
-    "eslint-plugin-node": "11.1.0"
+    "eslint-plugin-node": "11.1.0",
+    "typescript": "^3.9.6"
   }
 }
