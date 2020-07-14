@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ejs": "^2.4.2",
+    "ejs": "^3.0.0",
     "feedparser": "^1.1.4",
     "nodemailer": "^2.4.2",
     "request": "^2.72.0"
