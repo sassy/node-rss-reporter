@@ -3,14 +3,32 @@ import request = require('request');
 import * as ejs from 'ejs';
 import * as nodemailer from 'nodemailer';
 import * as fs from 'fs';
+import { exit } from 'process';
+import SMTPTransport = require('nodemailer/lib/smtp-transport');
 
-const URL = ''; //TBD
 
 interface Article {
   title: string;
   link: string;
   date: Date | null;
 }
+
+const argv = require('minimist')(process.argv.slice(2));
+if (argv.url === undefined) {
+  console.log('must --url option.');
+  exit();
+}
+if (argv.to === undefined) {
+  console.log('must --to option.');
+  exit();
+}
+if (argv.host === undefined) {
+  console.log('must --host option.');
+  exit();
+}
+const URL = argv.url;
+const to = argv.to;
+const host = argv.host;
 
 new Promise((resolve/*, reject*/) => {
   const req = request(URL);
@@ -48,18 +66,21 @@ new Promise((resolve/*, reject*/) => {
     const text = ejs.render(template, {
       items: articles
     });
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
+    const transporterOptions: SMTPTransport.Options = {
+      host: host,
+      port: argv.port || 465,
       secure: true,
-      auth: {
-          user: "", // TBD
-          pass: "" // TBD
+    };
+    if (argv.user && argv.pass) {
+      transporterOptions.auth = {
+        user: argv.user,
+        pass: argv.pass
       }
-    });
+    };
+    const transporter = nodemailer.createTransport(transporterOptions);
     const mailOptions = {
-      from: 'notify@test.com',
-      to: '', //TBD
+      from: 'noreply@test.com',
+      to: to,
       subject: 'RSS Report',
       html: text
     };
@@ -68,6 +89,6 @@ new Promise((resolve/*, reject*/) => {
         console.log(error);
         return;
       }
-      console.log(info.respose);
+      console.log(info);
     });
 });

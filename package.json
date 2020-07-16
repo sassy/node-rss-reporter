@@ -2,10 +2,12 @@
   "name": "node-rss-reporter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "bin": {
+    "node-rss-repoter": "./bin/node-rss-reporter.js"
+  },
   "scripts": {
-    "build": "tsc main.ts",
-    "lint": "eslint main.ts",
+    "build": "webpack",
+    "lint": "eslint src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,6 +19,7 @@
     "@types/request": "^2.48.5",
     "ejs": "^3.0.0",
     "feedparser": "^2.0.0",
+    "minimist": "^1.2.5",
     "nodemailer": "^6.0.0",
     "request": "^2.72.0"
   },
@@ -24,6 +27,9 @@
     "@types/node": "^14.0.23",
     "eslint": "7.4.0",
     "eslint-plugin-node": "11.1.0",
-    "typescript": "^3.9.6"
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   }
 }
