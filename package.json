@@ -16,7 +16,7 @@
     "lint": "eslint src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "sassy",
+  "author": "Satoshi Watanabe",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
     "url": "https://github.com/sassy/node-rss-reporter/issues"
   },
   "publishConfig": { 
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/@sassy"
   },
   "dependencies": {
     "@types/ejs": "3.0.4",
