@@ -79,7 +79,7 @@ new Promise((resolve/*, reject*/) => {
     };
     const transporter = nodemailer.createTransport(transporterOptions);
     const mailOptions = {
-      from: 'noreply@test.com',
+      from: argv.from || 'noreply@test.com',
       to: to,
       subject: 'RSS Report',
       html: text
