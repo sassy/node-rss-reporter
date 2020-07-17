@@ -16,7 +16,7 @@
     "lint": "eslint src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Satoshi Watanabe",
+  "author": "sassy",
   "license": "MIT",
   "repository": {
     "type": "git",
