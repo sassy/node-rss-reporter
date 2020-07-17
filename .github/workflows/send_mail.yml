@@ -1,0 +1,22 @@
+name: send mail
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: yarn add
+    - run: yarn build
+    - run: node dist/main.js --url {{secrets.FEED_URL}} --from {{secrets.FROM}} --to {{secrets.TO}} --host {{secrets.SMTP_HOST}} --user {{secrets.SMTP_USER}} --pass {{secrets.SMTP_PASSWORD}}
