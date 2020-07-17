@@ -25,6 +25,9 @@
   "bugs": {
     "url": "https://github.com/sassy/node-rss-reporter/issues"
   },
+  "publishConfig": { 
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "@types/ejs": "3.0.4",
     "@types/feedparser": "2.2.3",
