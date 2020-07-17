@@ -17,6 +17,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - run: yarn add
+    - run: yarn install
     - run: yarn build
     - run: node dist/main.js --url {{secrets.FEED_URL}} --from {{secrets.FROM}} --to {{secrets.TO}} --host {{secrets.SMTP_HOST}} --user {{secrets.SMTP_USER}} --pass {{secrets.SMTP_PASSWORD}}
