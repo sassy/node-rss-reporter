@@ -1,7 +1,13 @@
 {
   "name": "node-rss-reporter",
   "version": "1.0.0",
-  "description": "",
+  "description": "RSS/ATOM report used e-mail.",
+  "keywords": [
+    "rss",
+    "atom",
+    "feed",
+    "smtp"
+  ],
   "bin": {
     "node-rss-repoter": "./bin/node-rss-reporter.js"
   },
@@ -10,8 +16,15 @@
     "lint": "eslint src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Satoshi Watanabe",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sassy/node-rss-reporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sassy/node-rss-reporter/issues"
+  },
   "dependencies": {
     "@types/ejs": "3.0.4",
     "@types/feedparser": "2.2.3",
