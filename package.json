@@ -32,7 +32,7 @@
     "@types/ejs": "3.0.4",
     "@types/feedparser": "2.2.3",
     "@types/nodemailer": "6.4.0",
-    "@types/request": "2.48.5",
+    "@types/request": "2.48.6",
     "ejs": "3.1.6",
     "feedparser": "2.2.10",
     "minimist": "1.2.5",
