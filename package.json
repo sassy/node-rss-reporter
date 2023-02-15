@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@types/ejs": "3.0.4",
-    "@types/feedparser": "2.2.3",
+    "@types/feedparser": "2.2.4",
     "@types/nodemailer": "6.4.0",
     "@types/request": "2.48.5",
     "ejs": "3.1.6",
