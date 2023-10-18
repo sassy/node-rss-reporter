@@ -54,10 +54,10 @@
   resolved "https://registry.yarnpkg.com/@types/ejs/-/ejs-3.1.4.tgz#b9919c89767493b6443f85994ae6be6e49011b5c"
   integrity sha512-fnM/NjByiWdSRJRrmGxgqOSAnmOnsvX1QcNYk5TVyIIj+7ZqOKMb9gQa4OIl/lil2w/8TiTWV+nz3q8yqxez/w==
 
-"@types/feedparser@2.2.6":
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/@types/feedparser/-/feedparser-2.2.6.tgz#03553fe727826c2e3ef4cb7409b94d3552aff718"
-  integrity sha512-RzrQ9oJ2XazbH8aoMHkupHkJMwpCqsX7U7I80OHRoVnKuwir+LawhK7M+H4A0NsUh7hOcZAAQLxQMJujrAVqOw==
+"@types/feedparser@2.2.7":
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/@types/feedparser/-/feedparser-2.2.7.tgz#c2e047f7328aa0a3ead3c5928054e078e53d484c"
+  integrity sha512-1C0Gj8jvWkBorVSvRFqaLq14Vdc7fRlziLBATqRkziatYtNeTYGkGHUerAjLdsPjycPD8UXYr8a1ql5CrJGoXw==
   dependencies:
     "@types/node" "*"
     "@types/sax" "*"
