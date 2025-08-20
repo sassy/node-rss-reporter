@@ -31,12 +31,12 @@
   "dependencies": {
     "@types/ejs": "3.1.5",
     "@types/feedparser": "2.2.8",
-    "@types/nodemailer": "6.4.17",
+    "@types/nodemailer": "7.0.1",
     "@types/request": "2.48.13",
     "ejs": "3.1.10",
     "feedparser": "2.2.10",
     "minimist": "1.2.8",
-    "nodemailer": "6.10.1",
+    "nodemailer": "7.0.5",
     "request": "2.88.2"
   },
   "devDependencies": {
